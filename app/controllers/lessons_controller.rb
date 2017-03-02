@@ -23,3 +23,12 @@ class LessonsController < ApplicationController
     @current_course ||= current_lesson.section.course
   end
 end
+
+# shorthand for:
+#@current_course = @current_course || current_lession.section.course
+
+# first time (before @current_course is ever set)
+#@current_course = nil || current_lession.section.course
+
+# second time (after @current_course is set)
+#@current_course = @current_course # never gets to the other side of the ||
