@@ -45,6 +45,11 @@ h1, h2, h3, h4, h5, h6, .navbar {
   text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
 }
 
+.frosty .btn {
+  background: #d9534f;
+  border: none;
+}
+
 .btn {
   border-radius: 0;
 }
@@ -147,4 +152,8 @@ ul .header .fa {
 
 .lessons li p {
   margin: 0;
+}
+
+.badge {
+  font-size: 20px;
 }
