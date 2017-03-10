@@ -70,13 +70,20 @@ $(function () {
                   <br />
                   <span class="fa fa-list"></span>
                 </div>
-                <div class="col-11 text-center">
+
+                <div class="col-10 text-center">
                   <p>
                     <b><%= lesson.title %></b>
                   </p>
                   <p>
                     <%= lesson.subtitle %>
                   </p>
+                </div>
+                <div class="col-1">
+                  <br />
+                  <%= link_to instructor_section_lesson_path(lesson.section, lesson), method: :delete, data:{confirm: 'Are you sure?'} do %>
+                  <span class="fa fa-window-close"></span>
+                  <% end %>
                 </div>
               </div>
               <br class="clr" />
