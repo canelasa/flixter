@@ -49,11 +49,19 @@ $(function () {
   <ul class="sections">
     <% current_course.sections.rank(:row_order).each do |section| %>
       <li data-update-url="<%=instructor_section_path(section) %>" class="section-li">
-        <div class="header">
+        <div class="row" </div>
+        <div class="header col-10">
           <span class="fa fa-list"></span>
           <%= section.title %>
         </div>
-
+        <div class="col-2">
+          <br />
+          <%= link_to instructor_section_path(section), method: :delete, data:{confirm: 'Are you sure?'} do %>
+          <span class="fa fa-window-close"></span>
+          Delete Section
+          <% end %>
+        </div>
+      </div>
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary btn-lg float-right new-lesson-button" data-toggle="modal" data-target="#newLessonModal" data-lesson-url="<%= instructor_section_lessons_path(section) %>">
           New Lesson...
