@@ -5,10 +5,14 @@
   <hr />
 
   <% @courses.each do |course| %>
-    <h2 class="text-center">
-      <%= link_to course.title, course_path(course) %>
+    <div>
+      <h2 class="text-center">
+        <%= link_to course.title, course_path(course) %>
+      </h2>
+    </div>
+    <div class="text-center">
       <%= image_tag course.image, class: 'img-fluid' %>
-    </h2>
+    </div>
     <h5 class="text-center"><%= course.description %></h5>
     <br />
     <!-- <div class="row"> -->
